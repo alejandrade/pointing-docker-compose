@@ -6,7 +6,6 @@ services:
      - com.gigamog.mq.host=activemq
     ports: 
      - 9999:9999
-     - 80:80
     links:
      - activemq
   activemq:
