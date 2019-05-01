@@ -1,7 +1,7 @@
 version: '3'
 services:
   pointer:
-    image: "pointing:Dockerfile"
+    image: "sephto/pointing:mvp"
     ports: 
      - "9999:9999"
      - "80:80"
