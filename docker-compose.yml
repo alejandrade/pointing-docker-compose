@@ -2,14 +2,17 @@ version: '3'
 services:
   pointer:
     image: "sephto/pointing:mvp"
+    environment:
+     - com.gigamog.mq.host=activemq
     ports: 
-     - "9999:9999"
-     - "80:80"
+     - 9999:9999
+     - 80:80
+    links:
+     - activemq
   activemq:
     image: "smaject/activemq"
     ports:
-     - "5000:5000"
-     - "8161:8161"
-     - "61616:61616"
-     - "61613:61613"
-     - "61617:61617"
+     - 8161:8161
+     - 61616:61616
+     - 61613:61613
+     - 61617:61617
