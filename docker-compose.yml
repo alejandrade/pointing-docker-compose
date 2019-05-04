@@ -7,7 +7,7 @@ services:
      - spring.data.mongodb.host=mongodb
     ports: 
      - 9999:9999/tcp
-     - 9999:9999/ucp
+     - 9999:9999/udp
     links:
      - activemq
      - mongodb
