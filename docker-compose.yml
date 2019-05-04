@@ -6,7 +6,8 @@ services:
      - com.gigamog.mq.host=activemq
      - spring.data.mongodb.host=mongodb
     ports: 
-     - 9999:9999
+     - 9999:9999/tcp
+     - 9999:9999/ucp
     links:
      - activemq
      - mongodb
