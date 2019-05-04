@@ -1,13 +1,15 @@
 version: '3'
 services:
   pointer:
-    image: "sephto/pointing:mvp"
+    image: "sephto/pointing:latest"
     environment:
      - com.gigamog.mq.host=activemq
+     - spring.data.mongodb.host=mongodb
     ports: 
      - 9999:9999
     links:
      - activemq
+     - mongodb
   activemq:
     image: "smaject/activemq"
     ports:
@@ -15,3 +17,7 @@ services:
      - 61616:61616
      - 61613:61613
      - 61617:61617
+  mongodb:
+    image: "mongo:3.4.20-xenial"
+    ports:
+     - 27017:27017
